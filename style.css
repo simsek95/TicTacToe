@@ -4,6 +4,9 @@
 
 body{
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 table{
@@ -43,10 +46,11 @@ tr:last-child td{
 
 
 .table-container{
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
 }
 
 .shape{
@@ -56,4 +60,117 @@ tr:last-child td{
 
   height: 80%;
   width: 80%;
+}
+
+.player-turn-display{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.player-cross{
+  display: flex;
+  align-items: center;
+}
+
+.player-circle{
+  display: flex;
+  align-items: center;
+}
+
+.oppacity-50{
+  opacity: 0.5;
+}
+
+.horizontal-line{
+  position: absolute;
+  background-color: red;
+  height: 10px;
+  width: 0px;
+  transition: width 350ms ease-in-out;
+  z-index: 99;
+}
+
+.rotate-45{
+  transform: rotate(45deg);
+  width: 600px;
+}
+
+.rotate-minus-45{
+  transform: rotate(-45deg);
+  width: 600px;
+}
+
+.rotate-90{
+  transform: rotate(90deg);
+  width: 600px;
+}
+
+.rotate-0{
+  width: 600px;
+}
+
+.win-display{
+  background-color: rgb(101, 104, 103);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 80%;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+}
+
+@media(max-width:450px){
+  .win-display{
+    font-size: 30px;
+    top: 40%;
+  }
+
+  table{
+    width: 300px;
+    height: 300px;
+  }
+
+  .player-turn-display{
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .player-turn-display img{
+    width: 70px;
+  }
+
+  .shape{
+    left: 10px;
+    top: 10px;
+  }
+
+  
+.rotate-45{
+  transform: rotate(45deg);
+  width: 300px;
+}
+
+.rotate-minus-45{
+  transform: rotate(-45deg);
+  width: 300px;
+}
+
+.rotate-90{
+  transform: rotate(90deg);
+  width: 300px;
+}
+
+.rotate-0{
+  width: 300px;
+}
 }

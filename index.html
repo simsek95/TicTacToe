@@ -8,9 +8,20 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="table-container">
+<body>
 
+<div class="player-turn-display">
+  <div class="player-circle " id="player-circle"><img src="img/circle.png" alt="">Player 1</div>
+  <div class="player-cross oppacity-50" id="player-cross"><img src="img/cross.png" alt="">Player 2</div>
+</div>
+
+<div class="win-display hidden">
+  <div id="winDisplay">CIRCLE WINS</div>
+  <button onclick="replay()">Play again!</button>
+</div>
+
+    <div class="table-container">
+      <div class="horizontal-line" id="winLine"></div>
       <table>
         <tr>
           <td onclick="showShape(0)">
